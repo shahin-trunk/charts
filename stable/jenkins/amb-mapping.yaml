@@ -1,0 +1,9 @@
+apiVersion: getambassador.io/v2
+kind: Mapping
+metadata:
+  name: trunk-jenkins
+spec:
+  prefix: "/(trunk-jenkins.*|trunk-jenkins/.*)"
+  prefix_regex: true
+  rewrite: "/"
+  service: tnk-jenkins:8080
